@@ -5,8 +5,8 @@
   </div>
   <div>
     <%= link_to "Edit", edit_vehicle_path(@vehicle), class: "text-decoration-none" %> |
-    <%= link_to "Back", vehicles_path, class: "text-decoration-none" %> |
-    <%= link_to "Destroy", @vehicle, method: :delete, class: "text-decoration-none text-danger" %>
+    <%= link_to "Back", vehicles_path, class: "text-decoration-none" %>
+    <%= button_to "Destroy", @vehicle, method: :delete, class: "text-decoration-none text-danger" %>
   </div>
 </div>
 
