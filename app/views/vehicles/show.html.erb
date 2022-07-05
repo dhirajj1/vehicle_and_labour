@@ -1,10 +1,13 @@
 <div class="container">
   <p style="color: green"><%= notice %></p>
-  <%= render @vehicle %>
   <div>
-    <%= link_to "Edit this vehicle", edit_vehicle_path(@vehicle) %> |
-    <%= link_to "Back to vehicles", vehicles_path %>
-
-    <%= button_to "Destroy this vehicle", @vehicle, method: :delete %>
+    <%= render @vehicle, class: "" %>
+  </div>
+  <div>
+    <%= link_to "Edit", edit_vehicle_path(@vehicle), class: "text-decoration-none" %> |
+    <%= link_to "Back", vehicles_path, class: "text-decoration-none" %> |
+    <%= link_to "Destroy", @vehicle, method: :delete, class: "text-decoration-none text-danger" %>
   </div>
 </div>
+
+<%# btn btn-outline-danger btn-sm %>
