@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6">
+      <div class="card bx">
+        <div class="card-body">
+
+          <h2 class="text-center m-5">Sign up</h2>
+          
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="field">
+               <%= f.label :email, class: "mb-2" %><br />
+               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control mb-3'  %>
+            </div>
+
+            <div class="field">
+               <%= f.label :password, class: "mb-2" %>
+               <% if @minimum_password_length %>
+               <em>(<%= @minimum_password_length %> characters minimum)</em>
+               <% end %><br />
+               <%= f.password_field :password, autocomplete: "new-password", class: 'form-control mb-3'  %>
+            </div>
+
+            <div class="field">
+               <%= f.label :password_confirmation, class: "mb-2" %><br />
+               <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control mb-3'  %>
+            </div>
+
+             <div class="actions d-grid gap-2">
+              <%= f.submit "Sign up", class: 'btn btn-primary mb-2 btn-sm'  %>
+             </div>
+          <% end %>
+          <div class="text-center mt-2">
+            <%- if controller_name != 'sessions' %>
+            <p>If you have an account then <%= link_to "Log in", new_session_path(resource_name) %></p>
+            <% end %>
+          </div>  
+         
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>      

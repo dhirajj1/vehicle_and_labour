@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6">
+      <div class="card bx">
+        <div class="card-body">
+          <h2 class="text-center m-5">User Sign In</h2>
+
+          
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group">
+              <%= f.label :email, class: "mb-2" %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control mb-4' %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :password, class: "mb-2" %><br />
+              <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <% if devise_mapping.rememberable? %>
+                  <div class="form-group mt-2">
+                    <%= f.check_box :remember_me, class: 'm-2' %>
+                    <%= f.label :remember_me %>
+                  </div>
+                <% end %>
+              </div>  
+
+              <div class="col-lg-6 mt-2">
+                <div class="actions d-grid gap-2 d-md-flex justify-content-md-end">
+                  <%= f.submit "Log in", class: 'btn btn-primary m-2 btn-sm' %>
+                </div>
+              </div>
+            </div>    
+          <% end %>
+          
+          <div class="text-center">
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "Forgot password?", new_password_path(resource_name), class: "text1" %><br />
+            <% end %>
+
+            <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+              <p>Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name), class: "text1" %><br /></p>
+            <% end %>
+
+          </div>  
+        </div>
+      </div>    
+    </div>
+   
+  </div>
+</div>
+

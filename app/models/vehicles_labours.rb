@@ -1,0 +1,2 @@
+class VehicleLabours < ApplicationRecord
+end

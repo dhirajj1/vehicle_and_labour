@@ -1,0 +1,2 @@
+class Labour < ApplicationRecord
+end

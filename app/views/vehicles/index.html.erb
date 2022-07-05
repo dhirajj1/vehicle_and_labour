@@ -1,0 +1,26 @@
+<%= render "shared/navbar" %>
+          <p style="color: green"><%= notice %></p>
+          <h1>Vehicles</h1>
+          <div id="vehicles">
+            <% @vehicles.each do |vehicle| %>
+              <div class="row justify-content-center">
+                <div class="">
+                  <div class="card bx box">
+                    <div class="card-body">
+                      <%= render vehicle %>
+                      <p>
+                        <%= link_to "Show this vehicle", vehicle %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>        
+            <% end %>
+          </div>  
+
+
+
+<%# <%= link_to "New vehicle", new_vehicle_path %> 
+
+<%# <%= button_to "logout", destroy_user_session_path, method: :delete  %> 
+

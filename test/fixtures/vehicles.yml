@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pick_up_address: MyString
+  destination_address: MyString
+  pick_up_time: MyString
+  destination_time: MyString
+  vehicle: MyString
+
+two:
+  name: MyString
+  pick_up_address: MyString
+  destination_address: MyString
+  pick_up_time: MyString
+  destination_time: MyString
+  vehicle: MyString
