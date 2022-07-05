@@ -5,11 +5,13 @@
     <%# <%= image_tag("hello12.jpeg", :alt => "rss feed", :hight => "30px", :width => "50px") %> 
     <div class="d-flex">
       <%= link_to "New vehicle", new_vehicle_path, class: "nav-link me-md-2 text-white" %>
+      <%= link_to "Back", vehicles_labours_path, class: "nav-link me-md-2 text-white" %>
       <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-success btn-sm text-center" %>
    </div> 
   </div>
 </nav>
    
+      
     
    <%# d-grid gap-2 d-md-flex justify-content-md-end
 <div class="container">
