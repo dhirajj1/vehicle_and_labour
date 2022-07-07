@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :vehicles_labours
   resources :labours
   resources :vehicles
-  resources :vehicles_labours
   devise_for :users
   resources :users
 
@@ -9,8 +9,7 @@ Rails.application.routes.draw do
   
   # Defines the root path route ("/")
   # root "articles#index"
-  root "devise/sessions#new"
-  resources  :users
-  resources :vehicles_labours
-
+  devise_scope :user do
+    root "devise/sessions#new"
+  end
 end
