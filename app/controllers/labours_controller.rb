@@ -5,6 +5,8 @@ class LaboursController < ApplicationController
   # GET /labours or /labours.json
   def index
     @labours = Labour.all
+    @q = Labour.ransack(params[:q])
+    @labours = @q.result(distinct: true)
   end
 
   # GET /labours/1 or /labours/1.json
